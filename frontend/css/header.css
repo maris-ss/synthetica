@@ -1,0 +1,94 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: "Times New Roman", serif;
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    url(../image/background-gradient-pink.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  background-attachment: fixed;
+  background-color: #070707; 
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-light);
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+/* Cabeçalho */
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    width: 100%;
+    min-height: 3rem;
+    padding: 0 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    transition: 1s;
+    margin-top: .5rem;
+}
+
+.logo-synthetica {
+    width: 9rem;
+}
+
+header ul {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 8rem;
+}
+
+header a {
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: #d5d5d5;
+    transition: 0.5s;
+}
+
+header a:hover {
+    color: #5334c5;
+}
+
+header button,
+#item-form button, .botoes button {
+    padding: 9px 25px;
+    font-size: 1.2rem;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 20px;
+    color: #fff;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+header button {
+    background-color: #7D8CE7 ;
+    padding: 7px 30px;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+header button:hover {
+    background-color: #5334c5;
+    transition: 0.5s;
+}

@@ -1,0 +1,122 @@
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.textohero {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4rem; /*sobe o texto pra "centralizar"*/
+}
+
+.titulo {
+    width: 100%;
+    font-size: 2.2rem;
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.titulo .imghero {
+    width: 48%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.titulo .linha {
+    width: 3px;
+    height: 10rem;
+    background-color: #fff;
+    margin: auto;
+}
+
+.titulo .phero {
+    width: 48%;
+    padding: 0 11rem 0 0;
+    text-align: start;
+}
+
+.titulo .phero p {
+    text-wrap: wrap;
+    margin-left: 1rem;
+}
+
+.hero .subtitulo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #B4B3BA;
+    font-weight: 500;
+    margin-top: 1.5rem;
+}
+
+
+/* bolhas */
+
+.hero {
+    position: relative; /* referência para as bolhas */
+    overflow: visible; /* garante que bolhas não fiquem cortadas */
+}
+
+.bolha {
+    position: absolute;
+    z-index: 5; /* acima de tudo */
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.bolha1 {
+    top: 10%;
+    right: 10%;
+    width: 160px !important;
+    animation: float 8s ease-in-out infinite;
+}
+
+.bolha2 {
+    top: 34%;
+    left: 43%;
+    width: 90px !important;
+    animation: float 7s ease-in-out infinite;
+}
+
+.bolha3 {
+    bottom: 16%;
+    left: 19%;
+    width: 190px !important;
+    animation: float 5s ease-in-out infinite;
+}
+
+.textohero{
+    position: relative;
+    z-index: 1; /* abaixo das bolhas */
+}
+
+.hero img {
+    width: 40px;
+}
+
+.imghero img {
+    width: 13rem;
+    margin-right: 1rem;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

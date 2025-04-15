@@ -1,0 +1,73 @@
+.contexto {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+}
+
+.contexto-texto{
+    width: 50%;
+    padding: 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(124, 139, 230, 0.3); 
+}
+
+.contexto .title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.contexto .texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    font-size: 1.15rem;
+
+}
+
+.contexto {
+    position: relative; /* referência para as bolhas */
+    overflow: visible; /* garante que bolhas não fiquem cortadas */
+}
+
+.bolha {
+    position: absolute;
+    z-index: 5; /* acima de tudo */
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.bolha4 {
+    bottom: 5%;
+    right: 22%;
+    width: 140px;
+    animation: float 8s ease-in-out infinite;
+}
+
+.bolha5 {
+    top: 1%;
+    right: 15%;
+    width: 120px;
+    animation: float 7s ease-in-out infinite;
+}
+
+.bolha6 {
+    top: 28%;
+    left: 23%;
+    width: 170px ;
+    animation: float 5s ease-in-out infinite;
+}
+
+.contexto-texto {
+    position: relative;
+    z-index: 1; /* abaixo das bolhas */
+}
