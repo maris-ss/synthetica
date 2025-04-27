@@ -7,7 +7,7 @@
 
 /* Corpo da página */
 body {
-    font-family: "Times New Roman", serif;
+  font-family: 'Lora', serif;
       background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
     url(../image/background-gradient-pink.png);
   background-repeat: no-repeat;
@@ -15,7 +15,16 @@ body {
   background-position: 50%;
   background-attachment: fixed;
   background-color: #070707; 
+  overflow-x: hidden;
 }
+
+  input,
+  textarea,
+  select {
+    cursor: text;
+  }
+
+  
 
 a {
     text-decoration: none;
@@ -37,15 +46,15 @@ ol {
 
 header {
     width: 100%;
-    min-height: 3rem;
-    padding: 0 2rem;
+    min-height: 3.5rem;
+    padding: .3rem 2rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     z-index: 1;
     transition: 1s;
-    margin-top: .5rem;
+    background-color: #0a0a0a;
 }
 
 .logo-synthetica {
@@ -55,7 +64,7 @@ header {
 header ul {
     display: flex;
     justify-content: space-evenly;
-    gap: 8rem;
+    gap: 7rem;
 }
 
 header a {
@@ -66,7 +75,7 @@ header a {
 }
 
 header a:hover {
-    color: #5334c5;
+    color: #6E5BA4;
 }
 
 header button,
@@ -82,13 +91,34 @@ header button,
 }
 
 header button {
-    background-color: #7D8CE7 ;
+    background-color: #9380CA ;
     padding: 7px 30px;
     font-size: 1.3rem;
     font-weight: 600;
 }
 
 header button:hover {
-    background-color: #5334c5;
+    background-color: #6E5BA4;
     transition: 0.5s;
+}
+
+.naturezar button  {
+    background-color: #7D8CE7;
+    transition: 0.5s;
+    margin-right: -2rem;
+}
+
+.naturezar button:hover  {
+    background-color: #428d68;
+    color: #ffdd00;
+    transform: translateX(5px);
+}
+
+.dropdown {
+    visibility: hidden;
+}
+/* scroll */
+
+*::-webkit-scrollbar {
+    width: 0;
 }

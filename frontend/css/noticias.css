@@ -1,0 +1,330 @@
+.noticias {
+    width: 100%;
+    min-height: 250vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    background-color: #0A0A0A;
+}
+
+.botoes {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.botoes .botao1 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #E480A5;
+    font-size: 1.5rem;
+    border-radius: 5rem;
+    padding: 9px 50px;
+}
+
+.botoes .botao1:hover {
+    background-color: #B15476; 
+    transition: background-color 0.4s ease;
+}
+
+.botoes .botao2 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #9380CA;
+    font-size: 1.5rem;
+    border-radius: 5rem;
+    padding: 9px 65px;
+}
+
+.botoes .botao2:hover {
+    background-color: #6E5BA4; 
+    transition: background-color 0.4s ease;
+}
+
+.botoes .botao3 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #64A687;
+    font-size: 1.5rem;
+    border-radius: 5rem;
+    padding: 9px 45px;
+}
+
+.botoes .botao3:hover {
+    background-color: #447D62; 
+    transition: background-color 0.4s ease;
+}
+
+.container-not {
+  margin: 1rem;
+  padding: 1rem;
+  /* border: 1px solid #fff; */
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(min-content, auto);
+  gap: 0.5rem;
+  grid-template-areas: 
+    "not1 not1 not2 not3"
+    "not1 not1 not2 not3"
+    "not1 not1 not4 not5"
+    "qad  qad  not4 not5";
+}
+
+.not1, .not2, .not3, .not4, .not5, .qad {
+  background-color: #0a0a0a;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.not1 { grid-area: not1; }
+.not2 { grid-area: not2; }
+.not3 { grid-area: not3; }
+.not4 { grid-area: not4; }
+.not5 { grid-area: not5; }
+.qad  { grid-area: qad; }
+
+
+.alinha-noticias {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.alinha-noticias2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2.5rem;
+}
+
+#titulo {
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+#subtitulo {
+    font-size: 1.15rem;
+    font-weight: normal;
+    margin-bottom: 20px;
+    color: #E480A5;
+    font-weight: 500;
+}
+
+.arte #subtitulo {
+    color: #E480A5; /* Rosa */
+}
+
+.top #subtitulo {
+    color: #9380CA; /* Roxo */
+}
+
+.natureza #subtitulo {
+    color: #64A687; /* Roxo */
+}
+
+
+.not1 img, .not2 img, .not3 img, .not4 img, .not5 img {
+  width: 100%;
+  height: auto;
+}
+
+.not1 h3, .not2 h3, .not3 h3, .not4 h3, .not5 h3,
+.titulo-card  {
+    font-size: 1.1rem;
+    text-align: justify;
+    margin-bottom: 8px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.not1 p, .not2 p, .not3 p, .not4 p, .not5 p,
+.resumo-card {
+  font-size: .9rem;
+  text-align: justify;
+  margin-bottom: 10px;
+  font-weight: 400;
+    cursor: pointer;
+}
+
+/* Hover para botões na parte de Arte */
+.arte .not1:hover,
+.arte .not2:hover,
+.arte .not3:hover,
+.arte .not4:hover,
+.arte .not5:hover,
+.arte .qad:hover {
+  color: #E480A5; /* Cor rosa para a arte */
+  transition: background-color 0.4s ease;
+}
+
+    /* Hover para botões na parte de Top */
+.top .not1:hover,
+.top .not2:hover,
+.top .not3:hover,
+.top .not4:hover,
+.top .not5:hover,
+.top .qad:hover {
+  color: #9380CA; /* Cor roxa para a parte Top */
+  transition: background-color 0.4s ease;
+}
+
+.natureza .not1:hover,
+.natureza .not2:hover,
+.natureza .not3:hover,
+.natureza .not4:hover,
+.natureza .not5:hover,
+.natureza .qad:hover {
+  color: #64A687; /* Cor roxa para a parte Top */
+  transition: background-color 0.4s ease;
+}
+
+.not1 h3, .not2 h3, .not3 h3, .not4 h3, .not5 h3 {
+    color: #fff;
+}
+
+.not1 p, .not2 p, .not3 p, .not4 p, .not5 p {
+    color: #b9b9b9;
+}
+
+/* Para garantir que o hover afete apenas o container e não os textos individuais */
+.not1:hover h3, .not2:hover h3, .not3:hover h3, .not4:hover h3, .not5:hover h3,
+.not1:hover p, .not2:hover p, .not3:hover p, .not4:hover p, .not5:hover p {
+    color: inherit;
+}
+
+
+
+.not1:hover .mini-desc,
+.not2:hover .mini-desc,
+.not3:hover .mini-desc,
+.not4:hover .mini-desc,
+.not5:hover .mini-desc,
+.qad:hover .mini-desc {
+  color: #555 !important;  /* Mantém a cor original sem mudanças */
+}
+
+.mini-desc {
+  font-size: 0.85rem; /* Tamanho uniforme para todas */
+  color: #555; /* Cor cinza */
+  margin-top: 0.5rem;
+  text-align: justify;
+  line-height: 1.4;
+  /* Garantir que a mini-desc não seja afetada por hover */
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.imagem-card {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.titulo-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.titulo-card-big {
+    width: 90%;
+  font-size: 1.2rem;
+  text-align: justify; 
+  align-items: flex-start;  
+}
+
+.titulo-icons .icons {
+    width: 8%;
+    margin-top: 4px;
+}
+
+.icons {
+  width: 8%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.icons-line {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+
+.qad-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin-top: 20px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.qad-esquerda,
+.qad-direita {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.qad-direita .icons-right {
+  align-self: flex-end;
+  margin-bottom: 10px;
+}
+
+.qad-direita .imagem-card {
+  max-height: 150px;
+  object-fit: cover;
+}
+
+.qad-direita .mini-desc {
+  font-size: 0.85rem;
+  color: #555;
+  text-align: justify;
+  line-height: 1.4;
+}
+
+.qad-esquerda .resumo-card {
+  text-align: justify;
+}
+
+.alinha-noticias2 p {
+    font-size: 1rem;
+    font-weight: 500;
+    transition: 0.4s;
+    text-decoration: underline;
+    cursor: pointer;
+    color:#d9d9d9;
+}
+
+.alinha-noticias2 p:hover {
+    color: #7D8CE7;
+}

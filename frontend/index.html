@@ -1,42 +1,68 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>twitter</title>
-    <link rel="stylesheet" href="/frontend/style.css">
+    <title>SyntheticA</title>
     <link rel="stylesheet" href="/frontend/css/header.css">
+    <link rel="stylesheet" href="/frontend/css/cadastro.css">
     <link rel="stylesheet" href="/frontend/css/hero.css">
     <link rel="stylesheet" href="/frontend/css/contexto.css">
-    <link rel="stylesheet" href="/frontend/css/artigos.css">
+    <link rel="stylesheet" href="/frontend/css/noticias.css">
     <link rel="stylesheet" href="/frontend/css/escrever.css">
+    <link rel="stylesheet" href="/frontend/css/resposta.css">
     <link rel="stylesheet" href="/frontend/css/footer.css">
     <link href='https://unpkg.com/boxicons@latest/css/boxicons.min.css' rel='stylesheet'>
+
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
     <div class="container">
-        <header>
+        <header id="header">
             <div class="logo">
                 <img src="../frontend/image/logo-synthetica.png" alt="logo" class="logo-synthetica">
             </div>
             <nav>
                 <ul>
-                  <li><a href="#home">home</a></li>
-                  <li><a href="#articles">articles</a></li>
-                  <li><a href="#about">about</a></li>
-                  <li><a href="#IA's">IA's</a></li>
+                    <li><a href="#hero">início</a></li>
+                    <li><a href="#contexto">sobre</a></li>
+                    <li><a href="#noticias">notícias</a></li>
+                    <li><a href="#escrever">postar</a></li>
                 </ul>
             </nav>
-            <div class="login">
-                <button>get started</button>
+            <div class="naturezar">
+                <button>natureza</button>
             </div>
+            <div class="login">
+                <button onclick="openPopup()">comece aqui</button>
+            </div>
+
+
+            <div class="profile" id="profile">
+                <img id="profile-pic" src="" width="40" height="40" style="border-radius:50%" />
+                <div class="profile-info">
+                    <strong id="profile-name"></strong>
+                    <small id="profile-username"></small>
+                </div>
+                <div class="dropdown">
+                    <i class='bx bx-chevron-down arrow'></i>
+                    <div class="dropdown-content" id="dropdown-info">
+                        <p><strong>nome:</strong> <span id="info-name"></span></p>
+                        <p><strong>email:</strong> <span id="info-email"></span></p>
+                    </div>
+                </div>
+            </div>
+
         </header>
 
-        <section class="hero">
-
-            <img src="./image/bubble1.png" alt="bolha" class="bolha bolha1">
-            <img src="./image/bubble2.png" alt="bolha" class="bolha bolha2">
-            <img src="./image/bubble3.png" alt="bolha" class="bolha bolha3">
+        <section class="hero" id="hero">
+            <img src="../frontend/image/doggo.png" alt="cachorro" class="up cachorro">
+            <img src="../frontend/image/bubble1.png" alt="bolha" class="bolha bolha1">
+            <img src="../frontend/image/bubble2.png" alt="bolha" class="bolha bolha2">
+            <img src="../frontend/image/bubble3.png" alt="bolha" class="bolha bolha3">
 
             <div class="textohero">
                 <div class="titulo">
@@ -46,7 +72,7 @@
                     <div class="linha"></div>
                     <div class="phero">
                         <p>Oi! Vamos explorar a jornada digital da emoção humana e da tecnologia.</p>
-                        <p>Descubra um novo modo de interagir com o (atual) futuro.</p>
+                        <p>Descubra um novo modo de interagir com o <span>atual</span> futuro.</p>
                     </div>
                 </div>
                 <div class="subtitulo">
@@ -55,60 +81,288 @@
             </div>
         </section>
 
-        <section class="contexto">
+        <div class="popup-overlay" id="popup-overlay" style="display: none;">
+            <div class="popup" id="popup">
+                <button class="close-btn" onclick="closePopup()">×</button>
+                <div class="alinha">
+                    <h2>seja bem vindo á SyntheticA!</h2>
+                </div>
 
-        
-        <img src="./image/bubble1.png" alt="bolha" class="bolha bolha6">
-        <img src="./image/bubble2.png" alt="bolha" class="bolha bolha4">
-        <img src="./image/bubble3.png" alt="bolha" class="bolha bolha5">
+                <form id="form">
+                    <div class="alinha">
+                        <label for="name">nome:</label>
+                        <input type="text" id="name" placeholder="digite seu nome" />
+                    </div>
 
+                    <div class="alinha">
+                        <label for="username">username:</label>
+                        <input type="text" id="username" placeholder="digite seu username" />
+                    </div>
+
+                    <div class="alinha">
+                        <label for="email">email:</label>
+                        <input type="email" id="email" placeholder="digite seu email" />
+                    </div>
+                    <div class="alinha">
+                        <label for="password">senha:</label>
+                        <input type="password" id="password" placeholder="digite sua senha" />
+                    </div>
+
+                    <div class="alinha5">
+                        <p>selecione um icon:</p>
+                        <div class="avatars">
+                            <img src="../frontend/image/icon1.jpeg" onclick="selectAvatar(this)" />
+                            <img src="../frontend/image/icon2.jpeg" onclick="selectAvatar(this)" />
+                            <img src="../frontend/image/icon3.jpeg" onclick="selectAvatar(this)" />
+                        </div>
+                    </div>
+
+                    <div class="alinha4">
+                        <button type="button" onclick="cadastrar()">entrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+        <section class="contexto" id="contexto">
+
+            <img src="../frontend/image/bubble1.png" alt="bolha" class="bolha bolha6">
+            <img src="../frontend/image/bubble2.png" alt="bolha" class="bolha bolha4">
+            <img src="../frontend/image/bubble3.png" alt="bolha" class="bolha bolha5">
+            <img src="../frontend/image/borboleta.png" alt="borboleta" class="up borboleta">
+            <img src="../frontend/image/star.png" alt="estrela" class="up estrela">
 
             <div class="contexto-texto">
                 <div class="title">sobre a SyntheticA</div>
                 <div class="texto">
-                    <p>Em um mundo cada vez mais moldado pela tecnologia, o Synthetica surge como uma ponte entre o humano e o artificial. Mais do que um simples site, ele é um espaço onde ideias ganham forma, onde a curiosidade encontra respostas e onde a inteligência artificial se entrelaça com a essência da alma humana.</p>
-                    <p>No Synthetica, exploramos as tendências mais atuais do universo da tecnologia, mergulhamos em análises profundas sobre o impacto da IA na sociedade e desvendamos como essas inovações estão transformando a forma como vivemos, pensamos e nos conectamos. Aqui, a informação é viva, dinâmica e acessível — feita para quem quer entender, questionar e imaginar o futuro.</p>
-                    <p>Seja você um entusiasta da tecnologia, um profissional da área ou apenas alguém fascinado pelo amanhã, o Synthetica é o seu ponto de encontro com o novo. Porque quando mente e máquina caminham juntas, o conhecimento não tem limites.</p> 
-                </div>  
+                    <p>Em um mundo cada vez mais moldado pela tecnologia, o Synthetica surge como uma ponte entre o
+                        humano e o artificial. Mais do que um simples site, ele é um espaço onde ideias ganham forma,
+                        onde a curiosidade encontra respostas e onde a inteligência artificial se entrelaça com a
+                        essência da alma humana.</p>
+                    <p>No Synthetica, exploramos as tendências mais atuais do universo da tecnologia, mergulhamos em
+                        análises profundas sobre o impacto da IA na sociedade e desvendamos como essas inovações estão
+                        transformando a forma como vivemos, pensamos e nos conectamos. Aqui, a informação é viva,
+                        dinâmica e acessível — feita para quem quer entender, questionar e imaginar o futuro.</p>
+                    <p>Seja você um entusiasta da tecnologia, um profissional da área ou apenas alguém fascinado pelo
+                        amanhã, o Synthetica é o seu ponto de encontro com o novo. Porque quando mente e máquina
+                        caminham juntas, o conhecimento não tem limites.</p>
+                </div>
             </div>
         </section>
 
-        <section class="artigos">
-            <div class="botoes">
-                <button class="botao1"><i class='bx bxs-palette'></i> art and culture.</button>
-                <button class="botao2"><i class='bx bx-news'></i> latest news.</button>
-                <button class="botao3"><i class='bx bx-leaf'></i> nature harmony.</button>
+        <section class="noticias" id="noticias">
+
+            <div class="alinha-noticias">
+                <h1 id="titulo">notícias postadas</h1>
+                <h2 id="subtitulo">arte e cultura.</h2>
+            </div>
+
+            <div class="botoes menu">
+                <button class="botao1" onclick="carregarNoticias('arte')"><i class='bx bx-palette'></i>arte e cultura.</button>
+                <button class="botao2" onclick="carregarNoticias('top')"><i class='bx bx-rocket'></i>avanços e tecnologia.</button>
+                <button class="botao3" onclick="carregarNoticias('natureza')"><i class='bx bx-leaf'></i>natureza.</button>
+            </div>
+
+            <!-- NOVA DIV AQUI -->
+            <div class="area-conteudo-noticias">
+                <div class="container-not" id="noticiasContainer">
+                    <div class="not1"></div>
+                    <div class="not2"></div>
+                    <div class="not3"></div>
+                    <div class="not4"></div>
+                    <div class="not5"></div>
+                    <div class="qad"></div>
+                </div>
+            </div>
+            <!-- FIM DA NOVA DIV -->
+
+        </section>
+
+        <!-- Botão para abrir o formulário -->
+        <section class="escrever" id="escrever">
+            <div class="height">
+                <img src="../frontend/image/fone.png" class="up fone" alt="fone de ouvido">
+                <img src="../frontend/image/note.png" class="up note" alt="notebook">
+                <div class="black-back">
+                    <div class="escrever-list">
+                        <h1>poste uma nova notícia!</h1>
+                        <h4>mantenha a comunidade informada com as novidades mais quentes sobre inteligência artificial,
+                            arte, cultura e tecnologia emergente, com a ferramenta de postagens do Synthetica.</h4>
+                        <button id="btnAbrirFormulario" class="botao-escrever">nova notícia</button>
+                        <p>basta clicar em "nova notícia" e começar a escrever</p>
+                        <p><span>vamos manter o portal</span> SyntheticA <span>cada vez mais atualizado!</span></p>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+
+        <!-- Formulário (pop-up) -->
+        <section id="postar">
+            <div class="formulario">
+                <div id="form-container">
+                    <div class="form-top">
+                        <div class="form-header">
+                            <div class="left-side">
+                                <i class='bx bx-expand' id="btnExpandir" title="Expandir/Reduzir"></i>
+                            </div>
+
+                            <div class="right-side">
+                                <button id="btnFechar" class="close-btn">
+                                    <i class='bx bx-x'></i>
+                                </button>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="form-bottom">
+                        <form id="news-form">
+                            <div class="alinha2">
+                                <label for="">título:</label>
+                                <input type="text" placeholder="escreva seu título..." name="titulo">
+                                <button type="submit">publicar</button>
+                            </div>
+
+                            <label for="">corpo do texto:</label>
+                            <textarea placeholder="escreva seu texto aqui..." name="conteudo"></textarea>
+
+                            <div class="form-icons">
+                                <div class="left-icons">
+                                    <i class='bx bx-right-indent'></i>
+                                    <i class='bx bx-align-justify'></i>
+                                    <i class='bx bx-left-indent'></i>
+                                </div>
+                                <div class="right-icons">
+                                    <i class='bx bx-link'></i>
+
+                                    <div class="upload-wrapper">
+                                        <i class='bx bx-image-add' id="uploadIcon" title="Adicionar imagem"></i>
+                                        <input type="file" id="imageInput" accept="image/*" hidden>
+                                    </div>
+
+                                    <i class='bx bx-folder-plus'></i>
+                                    <i class='bx bx-location-plus'></i>
+                                    <i class='bx bx-trash'></i>
+                                </div>
+                            </div>
+
+                            <div class="alinha">
+                                <label for="">tags:</label>
+                                <input type="text" placeholder="tags (separadas por vírgula)" name="tags">
+                            </div>
+
+                            <div class="alinha3">
+                                <label for="">tipo de notícia:</label>
+                                <select name="tipo">
+                                    <option value="">filtros</option>
+                                    <option value="arte">arte e cultura</option>
+                                    <option value="tecnologia">avanços tecnológicos</option>
+                                    <option value="natureza">natureza</option>
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </section>
 
-        
-
-        <!-- <section class="formulario">
-            <div class="input">
-
-                <form id="item-form">   
-
-                    <div class="texto">
-                        <img src="/frontend/image/WhatsApp Image 2025-03-27 at 08.35.21.jpeg" alt="Avatar" class="avatar">
-                        <textarea id="item" placeholder="What's happening?" required></textarea>
-                    </div>
-
-                    <div class="botao">
-                        <button type="submit">Post</button>
-                    </div>
-                </form>
+        <div class="respostas-noticias">
+            <div class="not-container-top">
+                <h2>meus artigos postados</h2>
             </div>
-        </section> -->
-    
-        <!-- <section class="posts-exibir">
-            <div class="posts">
-                <ul id="item-list"></ul>
-            </div> 
-        </section> -->
-    <footer>
+            <div id="noticias-container"></div>
+        </div>
 
-    </footer>
-    <script defer src="/frontend/script.js"></script>
-    
+
+
+
+        <footer class="footer">
+            <img src="../frontend/image/bubble3.png" alt="bolha" class="bolha bolha7">
+            <img src="../frontend/image/bubble1.png" alt="bolha" class="bolha bolha8">
+            <div class="black"></div>
+
+            <div class="footer-container">
+                <!-- Cabeçalho do Footer -->
+                <div class="footer-header">
+                    <div class="header-content">
+                        <span class="header-tag">JÁ VIU O SUFICIENTE?</span>
+                        <h2 class="header-title">Entre em contato</h2>
+                    </div>
+                </div>
+
+                <div class="footer-grid">
+                    <div class="footer-column">
+                        <h3 class="company-name">SyntheticA</h3>
+                        <div class="divider"></div>
+                        <p class="company-description">Soluções inovadoras para monitoramento ambiental e tecnologia
+                            sustentável.</p>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4 class="location-title">MARI</h4>
+                        <ul class="contact-list">
+                            <li>
+                                <i class='bx bx-envelope'></i>
+                                <a href="mailto:marianasanho@gmail.com">marianasanho@gmail.com</a>
+                            </li>
+                            <li>
+                                <i class='bx bxl-instagram'></i>
+                                <a href="https://www.instagram.com/whatismaristhinkingabout?igsh=b3g2bHJtMGFjNDF3"
+                                    target="_blank">@whatmaristhinkingabout</a>
+                            </li>
+                            <li>
+                                <i class='bx bxl-github'></i>
+                                <a href="https://github.com/maris-ss" target="_blank">maris-ss</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4 class="location-title">SOPA</h4>
+                        <ul class="contact-list">
+                            <li>
+                                <i class='bx bx-envelope'></i>
+                                <a href="mailto:sophiapiccirillo@gmail.com">sophiapiccirillo@gmail.com</a>
+                            </li>
+                            <li>
+                                <i class='bx bxl-instagram'></i>
+                                <a href="https://www.instagram.com/messydoodless?igsh=MTlxa2ZjNDB3dng5dQ=="
+                                    target="_blank">@messydoodless</a>
+                            </li>
+                            <li>
+                                <i class='bx bxl-github'></i>
+                                <a href="https://github.com/sopacrxx" target="_blank">sopacrxx</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4 class="newsletter-title">QUER FICAR POR DENTRO?</h4>
+                        <a href="#" class="newsletter-link">ASSINE A SYNTHETICA →</a>
+
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p class="copyright">© 2025 SyntheticA. Todos os direitos reservados.</p>
+                    <div class="footer-links">
+                        <a href="#">Política de Privacidade</a>
+                        <a href="#">Termos de Uso</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script defer src="/frontend/js/cadastro.js"></script>
+        <script defer src="/frontend/js/resposta.js"></script>
+        <script defer src="/frontend/js/noticias.js"></script>
+        <script defer src="/frontend/js/popup.js"></script>
+        <script defer src="/frontend/js/mousetrail.js"></script>
+
 </body>
+
 </html>

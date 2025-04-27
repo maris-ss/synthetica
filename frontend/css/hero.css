@@ -16,9 +16,9 @@
 
 .titulo {
     width: 100%;
-    font-size: 2.2rem;
+    font-size: 2rem;
     color: #fff;
-    font-weight: 500;
+    font-weight: normal;
     text-align: center;
     display: flex;
     flex-direction: row;
@@ -44,9 +44,15 @@
     text-align: start;
 }
 
+.titulo .phero span {
+    color: #6E5BA4;
+    font-weight: bold;
+}
+
 .titulo .phero p {
     text-wrap: wrap;
     margin-left: 1rem;
+    font-weight: 700;
 }
 
 .hero .subtitulo {
@@ -57,10 +63,32 @@
     color: #B4B3BA;
     font-weight: 500;
     margin-top: 1.5rem;
+    font-weight: 500;
 }
 
+/* mouse */
 
-/* bolhas */
+.smoke-trail {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 600;
+    animation: fadeAndFloat 1.2s ease-out forwards;
+    filter: blur(6px); /* esfumaçado */
+  }
+
+  
+  @keyframes fadeAndFloat {
+    0% {
+      transform: translateY(0) scale(1);
+      opacity: 0.8;
+    }
+    100% {
+      transform: translateY(-40px) scale(0.6);
+      opacity: 0;
+    }
+  }
+  
 
 .hero {
     position: relative; /* referência para as bolhas */
@@ -69,35 +97,42 @@
 
 .bolha {
     position: absolute;
-    z-index: 5; /* acima de tudo */
+    z-index: 1;
     opacity: 0.6;
-    pointer-events: none;
+    pointer-events: none; /* impede que fiquem na frente */
+  }
+
+.cachorro {
+    top: -5%;
+    left: 20%;
+    opacity: 0.7;
+    width: 290px !important;
 }
 
 .bolha1 {
     top: 10%;
     right: 10%;
-    width: 160px !important;
+    width: 190px !important;
     animation: float 8s ease-in-out infinite;
 }
 
 .bolha2 {
     top: 34%;
     left: 43%;
-    width: 90px !important;
+    width: 120px !important;
     animation: float 7s ease-in-out infinite;
 }
 
 .bolha3 {
     bottom: 16%;
-    left: 19%;
-    width: 190px !important;
+    left: 6%;
+    width: 210px !important;
     animation: float 5s ease-in-out infinite;
 }
 
 .textohero{
     position: relative;
-    z-index: 1; /* abaixo das bolhas */
+    /* z-index: 1;  */
 }
 
 .hero img {
@@ -114,7 +149,7 @@
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-20px);
+    transform: translateY(-25px);
   }
   100% {
     transform: translateY(0);

@@ -1,154 +1,378 @@
-.input {
-    padding: 10px;
-    width: 30rem;
-    height: 30vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.escrever {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
 }
 
-.bottom-input {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 0.7rem;
+.height {
+  width: 100%;
+  height: 120vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
 
-.bottom-input .bx {
-    color: #1DA1F2;
+.up {
+  position: absolute;
+  z-index: 5;
+  pointer-events: none;
+  /* impede que fiquem na frente */
 }
 
-.texto {
-    width: 100%;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 0.5rem;
+.fone {
+  top: 1%;
+  left: 10%;
+  width: 390px;
+  /* animation: float 8s ease-in-out infinite; */
 }
 
-.avatar,
-.texto img {
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
+.note {
+  bottom: 5%;
+  right: 7%;
+  width: 350px;
+  /* animation: float 7s ease-in-out infinite; */
 }
 
-#item-form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 20px;
+.black-back {
+  width: 60%;
+  height: 75vh;
+  background-color: #0a0a0a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 10rem;
+  border-radius: 20px;
 }
 
-#item-form textarea {
-    padding: 10px;
-    font-size: 1rem;
-    width: 400px;
-    height: 100px;
-    background-color: #070707;
-    border: none;
+.escrever-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.escrever-list h1 {
+  color: #fff;
+  font-size: 3.5rem;
+  font-family: 'Lora', serif;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.escrever-list h4 {
+  color: #fff;
+  font-size: 1rem;
+  font-family: 'Lora', serif;
+  text-align: center;
+  font-weight: normal;
+  margin-bottom: 2rem;
+
+}
+
+.escrever-list p {
+  color: #fff;
+  font-size: 1rem;
+  font-family: 'Lora', serif;
+  text-align: center;
+  font-weight: normal;
+}
+
+.escrever-list span {
+  color: #6E5BA4;
+}
+
+/* Botão */
+.botao-escrever {
+  padding: 10px 40px;
+  background-color: #9380CA !important;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: 'Lora', serif;
+  margin-bottom: 2rem;
+}
+
+.botao-escrever:hover {
+  background-color: #6E5BA4 !important;
+  transition: 0.3s ease;
+}
+
+
+/* Formulário */
+
+.form-top {
+  width: 100%;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: #6E5BA4;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.form-bottom {
+  width: 100%;
+  padding: 20px;
+  padding-top: 0px;
+}
+
+.form-header {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.left-side {
+  width: 2rem;
+  display: flex;
+  align-items: center;
+  margin-top: 6px;
+  margin-right: .5rem;
+}
+
+.right-side {
+  width: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+#btnFechar {
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+}
+
+#btnExpandir,
+#btnFechar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
     color: #fff;
-    font-family: Arial, Helvetica, sans-serif;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    resize: none;
 }
 
-#item-form textarea:focus {
-    outline: none;
+#btnFechar i,
+#btnExpandir i {
+  font-size: 24px;
 }
 
-#item-form button {
-    background-color: #279BE8;
+/* Campos */
+.formulario form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+  flex-grow: 1;
 }
 
-#item-form button:hover {
-    background-color: #257bb5;
-    transition: 0.3s;
+.formulario form input[type="text"],
+.formulario form select,
+.formulario form textarea {
+  color: #fff;
+  padding: 6px 10px;
+  font-size: 16px;
+  border-radius: 20px;
+  border: 1px solid #BFACEB;
+  outline: none;
+  resize: vertical;
+  background-color: #BFACEB;
+  font-family: 'Lora', serif;
 }
 
-ul#item-list {
-    padding: 0;
-    width: 100%;
-    max-width: 30rem;
-    margin-top: 20px;
+.formulario form input[type="text"] {
+  background-color: #fff;
+  color: #B8C0F1;
+}
+
+.formulario form input[type="text"]::placeholder {
+  color: #B8C0F1;
+}
+
+.formulario form textarea {
+    min-height: 6rem; /* Tamanho mínimo para o textarea */
+  max-height: 30vh; /* Altura máxima para o textarea */
+  flex-grow: 1;
+  transition: height 0.3s ease;
+  color: #fff;
+}
+
+.formulario form textarea::placeholder {
+  color: #fff;
+  /* Cor do placeholder */
+  opacity: 0.7;
+  /* Opcional: ajusta a opacidade do placeholder */
+}
+
+#form-container.expanded textarea {
+  height: 30vh;
+}
+
+.formulario form select {
+  background-color: #6E5BA4;
+}
+
+/* Botão publicar */
+form button {
+  padding: 9px 25px;
+  background-color: #E480A5;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  align-self: flex-start;
+  font-family: 'Lora', serif;
+}
+
+form button:hover {
+  background-color: #e46996;
+  transition: 0.3s ease;
+}
+
+/* Alinhamentos */
+.formulario .alinha,
+.alinha2,
+.alinha3 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: .5rem;
+}
+
+.formulario .alinha label {
+  width: 7%;
+}
+
+.formulario .alinha input {
+  width: 93%;
+}
+
+.alinha2 label {
+  width: 7%;
+}
+
+.alinha2 input {
+  width: 78%;
+}
+
+.alinha2 button {
+  width: 15%;
+}
+
+.alinha3 label {
+  width: 20%;
+}
+
+.alinha3 select {
+  width: 80%;
+}
+
+/* Labels */
+.formulario label {
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+/* Ícones */
+.form-icons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  color: #fff;
+  padding-left: .5rem;
+}
+
+.right-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.upload-wrapper i,
+.form-icons i {
+  cursor: pointer;
+}
+
+/* Botão */
+.botao-escrever {
+  padding: 10px 30px;
+  background-color: #E480A5;
+  color: #fff;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: 'Lora', serif;
+}
+
+.botao-escrever:hover {
+  background-color: #e46996;
+  transition: 0.3s ease;
+}
+
+#postar {
+  position: fixed;
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50rem !important;
+  height: 80vh;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#form-container {
+  background: #BFACEB;
+  border-radius: 10px;
     display: flex;
-    flex-direction: column-reverse;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  transition: width 0.4s ease, height 0.4s ease, top 0.4s ease, left 0.4s ease, transform 0.4s ease;
 }
 
-ul#item-list li {
-    padding: 15px;
-    margin-bottom: 10px;
-    font-size: 1.1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.formulario {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-.post {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    border-bottom: 1px solid #2f3336;
-    padding: 15px;
-    width: 100%;
-    max-width: 500px;
+/* Quando abrir */
+#postar.aberto {
+  display: flex;
 }
 
-.post-content {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
 
-.user-info {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.username {
-    font-weight: 500;
-    color: #fff;
-    font-size: 1rem;
-}
-
-.user-handle {
-    font-size: 0.9rem;
-    color: #8a8a8a;
-}
-
-.message {
-    margin: 5px 0;
-    font-size: 1rem;
-    font-weight: 300;
-    color: #fff;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    line-height: 1.3rem;
-}
-
-.button-group {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    gap: 20px;
-}
-
-.button-group button {
-    border: none;
-    background: none;
-    color: #657786;
-    font-size: 14px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    margin-top: 1rem;
-}
-
-.button-group button:hover {
-    color: #1DA1F2;
+/* Modo expandido */
+#form-container.expanded {
+  width: 90vw;
+  height: 90vh;
+  max-width: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* ← ESSA LINHA centraliza */
+  z-index: 1000;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+  overflow-y: auto;
 }
