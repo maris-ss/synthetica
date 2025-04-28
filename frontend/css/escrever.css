@@ -20,21 +20,18 @@
   position: absolute;
   z-index: 5;
   pointer-events: none;
-  /* impede que fiquem na frente */
 }
 
 .fone {
   top: 1%;
   left: 10%;
   width: 390px;
-  /* animation: float 8s ease-in-out infinite; */
 }
 
 .note {
   bottom: 5%;
   right: 7%;
   width: 350px;
-  /* animation: float 7s ease-in-out infinite; */
 }
 
 .black-back {
@@ -86,7 +83,6 @@
   color: #6E5BA4;
 }
 
-/* Botão */
 .botao-escrever {
   padding: 10px 40px;
   background-color: #9380CA !important;
@@ -103,9 +99,6 @@
   background-color: #6E5BA4 !important;
   transition: 0.3s ease;
 }
-
-
-/* Formulário */
 
 .form-top {
   width: 100%;
@@ -160,7 +153,7 @@
   border: none;
   background: transparent;
   cursor: pointer;
-    color: #fff;
+  color: #fff;
 }
 
 #btnFechar i,
@@ -168,7 +161,6 @@
   font-size: 24px;
 }
 
-/* Campos */
 .formulario form {
   display: flex;
   flex-direction: column;
@@ -201,8 +193,8 @@
 }
 
 .formulario form textarea {
-    min-height: 6rem; /* Tamanho mínimo para o textarea */
-  max-height: 30vh; /* Altura máxima para o textarea */
+  min-height: 6rem;
+  max-height: 30vh;
   flex-grow: 1;
   transition: height 0.3s ease;
   color: #fff;
@@ -210,9 +202,7 @@
 
 .formulario form textarea::placeholder {
   color: #fff;
-  /* Cor do placeholder */
   opacity: 0.7;
-  /* Opcional: ajusta a opacidade do placeholder */
 }
 
 #form-container.expanded textarea {
@@ -223,7 +213,6 @@
   background-color: #6E5BA4;
 }
 
-/* Botão publicar */
 form button {
   padding: 9px 25px;
   background-color: #E480A5;
@@ -241,7 +230,6 @@ form button:hover {
   transition: 0.3s ease;
 }
 
-/* Alinhamentos */
 .formulario .alinha,
 .alinha2,
 .alinha3 {
@@ -281,13 +269,11 @@ form button:hover {
   width: 80%;
 }
 
-/* Labels */
 .formulario label {
   color: #fff;
   font-size: 1.2rem;
 }
 
-/* Ícones */
 .form-icons {
   width: 100%;
   display: flex;
@@ -308,7 +294,6 @@ form button:hover {
   cursor: pointer;
 }
 
-/* Botão */
 .botao-escrever {
   padding: 10px 30px;
   background-color: #E480A5;
@@ -342,7 +327,7 @@ form button:hover {
 #form-container {
   background: #BFACEB;
   border-radius: 10px;
-    display: flex;
+  display: flex;
   flex-direction: column;
   width: 100%;
   height: 100%;
@@ -356,13 +341,10 @@ form button:hover {
   flex-direction: column;
 }
 
-/* Quando abrir */
 #postar.aberto {
   display: flex;
 }
 
-
-/* Modo expandido */
 #form-container.expanded {
   width: 90vw;
   height: 90vh;
@@ -371,7 +353,6 @@ form button:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* ← ESSA LINHA centraliza */
   z-index: 1000;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
   overflow-y: auto;

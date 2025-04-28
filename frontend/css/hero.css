@@ -1,156 +1,156 @@
 .hero {
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .textohero {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 4rem; /*sobe o texto pra "centralizar"*/
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4rem;
 }
 
 .titulo {
-    width: 100%;
-    font-size: 2rem;
-    color: #fff;
-    font-weight: normal;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
+  width: 100%;
+  font-size: 2rem;
+  color: #fff;
+  font-weight: normal;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
 }
 
 .titulo .imghero {
-    width: 48%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+  width: 48%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .titulo .linha {
-    width: 3px;
-    height: 10rem;
-    background-color: #fff;
-    margin: auto;
+  width: 3px;
+  height: 10rem;
+  background-color: #fff;
+  margin: auto;
 }
 
 .titulo .phero {
-    width: 48%;
-    padding: 0 11rem 0 0;
-    text-align: start;
+  width: 48%;
+  padding: 0 11rem 0 0;
+  text-align: start;
 }
 
 .titulo .phero span {
-    color: #6E5BA4;
-    font-weight: bold;
+  color: #6E5BA4;
+  font-weight: bold;
 }
 
 .titulo .phero p {
-    text-wrap: wrap;
-    margin-left: 1rem;
-    font-weight: 700;
+  text-wrap: wrap;
+  margin-left: 1rem;
+  font-weight: 700;
 }
 
 .hero .subtitulo {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    font-size: 1.5rem;
-    color: #B4B3BA;
-    font-weight: 500;
-    margin-top: 1.5rem;
-    font-weight: 500;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #B4B3BA;
+  font-weight: 500;
+  margin-top: 1.5rem;
+  font-weight: 500;
 }
 
-/* mouse */
-
 .smoke-trail {
-    position: absolute;
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 600;
-    animation: fadeAndFloat 1.2s ease-out forwards;
-    filter: blur(6px); /* esfumaçado */
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 600;
+  animation: fadeAndFloat 1.2s ease-out forwards;
+  filter: blur(6px);
+}
+
+
+@keyframes fadeAndFloat {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.8;
   }
 
-  
-  @keyframes fadeAndFloat {
-    0% {
-      transform: translateY(0) scale(1);
-      opacity: 0.8;
-    }
-    100% {
-      transform: translateY(-40px) scale(0.6);
-      opacity: 0;
-    }
+  100% {
+    transform: translateY(-40px) scale(0.6);
+    opacity: 0;
   }
-  
+}
+
 
 .hero {
-    position: relative; /* referência para as bolhas */
-    overflow: visible; /* garante que bolhas não fiquem cortadas */
+  position: relative;
+  overflow: visible;
 }
 
 .bolha {
-    position: absolute;
-    z-index: 1;
-    opacity: 0.6;
-    pointer-events: none; /* impede que fiquem na frente */
-  }
+  position: absolute;
+  z-index: 1;
+  opacity: 0.6;
+  pointer-events: none;
+}
 
 .cachorro {
-    top: -5%;
-    left: 20%;
-    opacity: 0.7;
-    width: 290px !important;
+  top: -5%;
+  left: 20%;
+  opacity: 0.7;
+  width: 290px !important;
 }
 
 .bolha1 {
-    top: 10%;
-    right: 10%;
-    width: 190px !important;
-    animation: float 8s ease-in-out infinite;
+  top: 10%;
+  right: 10%;
+  width: 190px !important;
+  animation: float 8s ease-in-out infinite;
 }
 
 .bolha2 {
-    top: 34%;
-    left: 43%;
-    width: 120px !important;
-    animation: float 7s ease-in-out infinite;
+  top: 34%;
+  left: 43%;
+  width: 120px !important;
+  animation: float 7s ease-in-out infinite;
 }
 
 .bolha3 {
-    bottom: 16%;
-    left: 6%;
-    width: 210px !important;
-    animation: float 5s ease-in-out infinite;
+  bottom: 16%;
+  left: 6%;
+  width: 210px !important;
+  animation: float 5s ease-in-out infinite;
 }
 
-.textohero{
-    position: relative;
-    /* z-index: 1;  */
+.textohero {
+  position: relative;
 }
 
 .hero img {
-    width: 40px;
+  width: 40px;
 }
 
 .imghero img {
-    width: 13rem;
-    margin-right: 1rem;
+  width: 13rem;
+  margin-right: 1rem;
 }
 
 @keyframes float {
   0% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-25px);
   }
+
   100% {
     transform: translateY(0);
   }

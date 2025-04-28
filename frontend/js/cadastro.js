@@ -44,7 +44,6 @@ function cadastrar() {
 
   document.getElementById("profile").style.display = "flex";
 
-  // Salvar no localStorage
   const userData = {
     name: name,
     username: username,
@@ -53,7 +52,6 @@ function cadastrar() {
   localStorage.setItem("usuarioLogado", JSON.stringify(userData));
 }
 
-// Fecha ao clicar fora da popup
 document
   .getElementById("popup-overlay")
   .addEventListener("click", function (e) {
@@ -62,7 +60,6 @@ document
     }
   });
 
-// Fecha com tecla ESC
 document.addEventListener("keydown", function (e) {
   if (e.key === "Escape") {
     closePopup();

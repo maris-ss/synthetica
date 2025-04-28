@@ -1,249 +1,252 @@
 .footer {
-    width: 100%;
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    color: #fff;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #fff;
 }
 
 .black {
-    width: 100%;
-    height: 5rem;
-    background-color: #0a0a0a;
+  width: 100%;
+  height: 5rem;
+  background-color: #0a0a0a;
 }
 
 .footer .bolha7 {
-    top: 1%;
-    right: 10%;
-    width: 190px !important;
-    animation: float 8s ease-in-out infinite;
+  top: 1%;
+  right: 10%;
+  width: 190px !important;
+  animation: float 8s ease-in-out infinite;
 }
 
 .footer .bolha8 {
-    top: 11%;
-    left: 15%;
-    width: 200px !important;
-    animation: float 5s ease-in-out infinite;
+  top: 11%;
+  left: 15%;
+  width: 200px !important;
+  animation: float 5s ease-in-out infinite;
 
 }
-  .footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0;
-  }
-  
-  /* Cabeçalho do Footer */
-  .footer-header {
-    padding: 40px 40px 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  }
-  
-  .header-tag {
-    display: block;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 8px;
-    opacity: 0.7;
-  }
-  
-  .header-title {
-    font-size: 32px;
-    font-weight: 300;
-    letter-spacing: -0.5px;
-  }
-  
-  /* Grid do Footer */
-  .footer-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-    padding: 40px;
-  }
-  
-  /* Colunas do Footer */
-  .footer-column {
-    padding-right: 20px;
-  }
-  
-  /* Empresa */
-  .company-name {
-    font-size: 28px;
-    font-weight: 300;
-    margin-bottom: 15px;
-  }
-  
-  .divider {
-    width: 40px;
-    height: 2px;
-    background-color: rgba(255, 255, 255, 0.3);
-    margin-bottom: 15px;
-  }
-  
-  .company-description {
-    font-size: 15px;
-    opacity: 0.7;
-    line-height: 1.5;
-  }
-  
-  /* Títulos de Localização */
-  .location-title, .newsletter-title {
-    font-size: 14px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 20px;
-  }
-  
-  /* Lista de Contatos */
-  .contact-list {
-    list-style: none;
-  }
-  
-  .contact-list li {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 15px;
-  }
-  
-  .contact-list i {
-    margin-right: 10px;
-    margin-top: 3px;
-    opacity: 0.7;
-    width: 16px;
-  }
-  
-  .contact-list a, .contact-list span {
-    font-size: 15px;
-    opacity: 0.8;
-    text-decoration: none;
-    color: white;
-    transition: all 0.2s ease;
-  }
-  
-  .contact-list a:hover {
-    opacity: 1;
-    color: #F1C4ED;
-  }
-  
-  /* Newsletter */
-  .newsletter-link {
-    display: inline-block;
-    font-size: 14px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: white;
-    text-decoration: none;
-    transition: all 0.2s ease;
-  }
-  
-  .newsletter-link:hover {
-    color: #6E5BA4;
-    transform: translateX(5px);
-  }
-  
-  /* Social Links */
-  .social-links {
-    display: flex;
-    gap: 15px;
-    margin-top: 25px;
-  }
-  
-  .social-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: white;
-    text-decoration: none;
-    transition: all 0.2s ease;
-  }
-  
-  .social-icon:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    transform: translateY(-3px);
-  }
-  
-  .social-icon i {
-    font-size: 18px;
-    color: wh;
-  }
-  
-  /* Rodapé do Footer */
-  .footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-  }
-  
-  .copyright {
-    font-size: 13px;
-    opacity: 0.7;
-  }
-  
-  .footer-links {
-    display: flex;
-    gap: 20px;
-  }
-  
-  .footer-links a {
-    font-size: 13px;
-    color: rgba(255, 255, 255, 0.7);
-    text-decoration: none;
-    transition: color 0.2s ease;
-  }
-  
-  .footer-links a:hover {
-    color: #F1C4ED;
-  }
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.footer-header {
+  padding: 40px 40px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.header-tag {
+  display: block;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  opacity: 0.7;
+}
+
+.header-title {
+  font-size: 32px;
+  font-weight: 300;
+  letter-spacing: -0.5px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  padding: 40px;
+}
+
+.footer-column {
+  padding-right: 20px;
+}
+
+.company-name {
+  font-size: 28px;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+
+.divider {
+  width: 40px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin-bottom: 15px;
+}
+
+.company-description {
+  font-size: 15px;
+  opacity: 0.7;
+  line-height: 1.5;
+}
+
+.location-title,
+.newsletter-title {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.contact-list {
+  list-style: none;
+}
+
+.contact-list li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.contact-list i {
+  margin-right: 10px;
+  margin-top: 3px;
+  opacity: 0.7;
+  width: 16px;
+}
+
+.contact-list a,
+.contact-list span {
+  font-size: 15px;
+  opacity: 0.8;
+  text-decoration: none;
+  color: white;
+  transition: all 0.2s ease;
+}
+
+.contact-list a:hover {
+  opacity: 1;
+  color: #F1C4ED;
+}
+
+.newsletter-link {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: white;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.newsletter-link:hover {
+  color: #6E5BA4;
+  transform: translateX(5px);
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.social-icon:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+}
+
+.social-icon i {
+  font-size: 18px;
+  color: wh;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.copyright {
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #F1C4ED;
+}
+
 #container3D {
-    position: fixed;
-    inset: 0;
-    /* background-color: red; */
-    z-index: 100;
-    pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  pointer-events: none;
 }
 
-@media screen and (max-width: 1023px){
-    #banner .title {
-        font-size: 3.5rem;
-    }
-    #intro .content-fit {
-        flex-direction: column;
-    }
+@media screen and (max-width: 1023px) {
+  #banner .title {
+    font-size: 3.5rem;
+  }
+
+  #intro .content-fit {
+    flex-direction: column;
+  }
 }
-@media screen and (max-width: 767px){
-    #banner .title {
-        font-size: 2.5rem;
-    }
-    #intro .content-fit {
-        flex-direction: column;
-    }
-    .section .number {
-        font-size: 5em;
-    }
-    .section .content-fit .title {
-        font-size: 2rem;
-    }
-    #description .content-fit {
-        padding-right: 0;
-    }
-    #contact table {
-        font-size: 1em;
-    }
-    #contact .sign {
-        font-size: 2em;
-    }
-    #container3D {
-        position: absolute;
-    }
+
+@media screen and (max-width: 767px) {
+  #banner .title {
+    font-size: 2.5rem;
+  }
+
+  #intro .content-fit {
+    flex-direction: column;
+  }
+
+  .section .number {
+    font-size: 5em;
+  }
+
+  .section .content-fit .title {
+    font-size: 2rem;
+  }
+
+  #description .content-fit {
+    padding-right: 0;
+  }
+
+  #contact table {
+    font-size: 1em;
+  }
+
+  #contact .sign {
+    font-size: 2em;
+  }
+
+  #container3D {
+    position: absolute;
+  }
 }

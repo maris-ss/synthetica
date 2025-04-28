@@ -40,7 +40,6 @@
   overflow: hidden;
 }
 
-/* Layout de topo: perfil + título e imagem */
 .noticia-header {
   display: flex;
   flex-direction: row;

@@ -1,11 +1,10 @@
 let lastTime = 0;
 
-// Cores suaves tipo fumaça
 const colors = ['#F1C4ED', '#7D8CE7', '#E3E5B4'];
 
 document.addEventListener('mousemove', (e) => {
   const now = Date.now();
-  if (now - lastTime < 60) return; // controla frequência
+  if (now - lastTime < 60) return;
   lastTime = now;
 
   const elementBelow = document.elementFromPoint(e.clientX, e.clientY);
@@ -14,13 +13,12 @@ document.addEventListener('mousemove', (e) => {
     elementBelow?.closest('#contexto') ||
     elementBelow?.closest('#header')
   ) {
-    const bubbleCount = Math.floor(Math.random() * 3) + 2; // 2 a 4 fumacinhas
+    const bubbleCount = Math.floor(Math.random() * 3) + 2; 
 
     for (let i = 0; i < bubbleCount; i++) {
       const smoke = document.createElement('div');
       smoke.className = 'smoke-trail';
 
-      // Tamanho e posição randômica ao redor do cursor
       const size = Math.random() * 30 + 20;
       const offsetX = (Math.random() - 0.5) * 40;
       const offsetY = (Math.random() - 0.5) * 40;

@@ -1,30 +1,26 @@
-/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Corpo da página */
 body {
-  font-family: 'Lora', serif;
-      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-    url(../image/background-gradient-pink.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50%;
-  background-attachment: fixed;
-  background-color: #070707; 
-  overflow-x: hidden;
+    font-family: 'Lora', serif;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+        url(../image/background-gradient-pink.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    background-attachment: fixed;
+    background-color: #070707;
+    overflow-x: hidden;
 }
 
-  input,
-  textarea,
-  select {
+input,
+textarea,
+select {
     cursor: text;
-  }
-
-  
+}
 
 a {
     text-decoration: none;
@@ -36,7 +32,6 @@ ol {
     list-style: none;
 }
 
-/* Cabeçalho */
 .container {
     width: 100%;
     height: 100vh;
@@ -79,7 +74,8 @@ header a:hover {
 }
 
 header button,
-#item-form button, .botoes button {
+#item-form button,
+.botoes button {
     padding: 9px 25px;
     font-size: 1.2rem;
     border: none;
@@ -91,7 +87,7 @@ header button,
 }
 
 header button {
-    background-color: #9380CA ;
+    background-color: #9380CA;
     padding: 7px 30px;
     font-size: 1.3rem;
     font-weight: 600;
@@ -102,13 +98,13 @@ header button:hover {
     transition: 0.5s;
 }
 
-.naturezar button  {
+.naturezar button {
     background-color: #7D8CE7;
     transition: 0.5s;
     margin-right: -2rem;
 }
 
-.naturezar button:hover  {
+.naturezar button:hover {
     background-color: #428d68;
     color: #ffdd00;
     transform: translateX(5px);
@@ -117,7 +113,6 @@ header button:hover {
 .dropdown {
     visibility: hidden;
 }
-/* scroll */
 
 *::-webkit-scrollbar {
     width: 0;

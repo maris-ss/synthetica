@@ -34,7 +34,9 @@
                 </ul>
             </nav>
             <div class="naturezar">
-                <button>natureza</button>
+                <button onclick="window.location.href='https://synthetica-six.vercel.app/';">
+                    natureza
+                </button>
             </div>
             <div class="login">
                 <button onclick="openPopup()">comece aqui</button>
@@ -159,12 +161,14 @@
             </div>
 
             <div class="botoes menu">
-                <button class="botao1" onclick="carregarNoticias('arte')"><i class='bx bx-palette'></i>arte e cultura.</button>
-                <button class="botao2" onclick="carregarNoticias('top')"><i class='bx bx-rocket'></i>avanços e tecnologia.</button>
-                <button class="botao3" onclick="carregarNoticias('natureza')"><i class='bx bx-leaf'></i>natureza.</button>
+                <button class="botao1" onclick="carregarNoticias('arte')"><i class='bx bx-palette'></i>arte e
+                    cultura.</button>
+                <button class="botao2" onclick="carregarNoticias('top')"><i class='bx bx-rocket'></i>avanços
+                    tecnológicos.</button>
+                <button class="botao3" onclick="carregarNoticias('natureza')"><i
+                        class='bx bx-leaf'></i>natureza.</button>
             </div>
 
-            <!-- NOVA DIV AQUI -->
             <div class="area-conteudo-noticias">
                 <div class="container-not" id="noticiasContainer">
                     <div class="not1"></div>
@@ -175,11 +179,8 @@
                     <div class="qad"></div>
                 </div>
             </div>
-            <!-- FIM DA NOVA DIV -->
-
         </section>
 
-        <!-- Botão para abrir o formulário -->
         <section class="escrever" id="escrever">
             <div class="height">
                 <img src="../frontend/image/fone.png" class="up fone" alt="fone de ouvido">
@@ -195,11 +196,8 @@
                     </div>
                 </div>
             </div>
-
-
         </section>
 
-        <!-- Formulário (pop-up) -->
         <section id="postar">
             <div class="formulario">
                 <div id="form-container">
@@ -208,15 +206,12 @@
                             <div class="left-side">
                                 <i class='bx bx-expand' id="btnExpandir" title="Expandir/Reduzir"></i>
                             </div>
-
                             <div class="right-side">
                                 <button id="btnFechar" class="close-btn">
                                     <i class='bx bx-x'></i>
                                 </button>
                             </div>
                         </div>
-
-
                     </div>
 
                     <div class="form-bottom">
@@ -259,9 +254,9 @@
                                 <label for="">tipo de notícia:</label>
                                 <select name="tipo">
                                     <option value="">filtros</option>
-                                    <option value="arte">arte e cultura</option>
-                                    <option value="tecnologia">avanços tecnológicos</option>
-                                    <option value="natureza">natureza</option>
+                                    <option value="arte e cultura.">arte e cultura</option>
+                                    <option value="avanços tecnológicos.">avanços tecnológicos</option>
+                                    <option value="natureza.">natureza</option>
                                 </select>
                             </div>
                         </form>
@@ -277,16 +272,12 @@
             <div id="noticias-container"></div>
         </div>
 
-
-
-
         <footer class="footer">
             <img src="../frontend/image/bubble3.png" alt="bolha" class="bolha bolha7">
             <img src="../frontend/image/bubble1.png" alt="bolha" class="bolha bolha8">
             <div class="black"></div>
 
             <div class="footer-container">
-                <!-- Cabeçalho do Footer -->
                 <div class="footer-header">
                     <div class="header-content">
                         <span class="header-tag">JÁ VIU O SUFICIENTE?</span>
@@ -364,5 +355,4 @@
         <script defer src="/frontend/js/mousetrail.js"></script>
 
 </body>
-
 </html>

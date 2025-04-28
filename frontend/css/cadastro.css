@@ -1,44 +1,46 @@
-button, .arrow, .avatars img {
-    cursor: pointer;
-  }
-  
-  .popup-overlay {
-    display: none;
-    position: fixed;
-    top: 0; left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.6);
-    z-index: 998;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .popup {
-    background: #BFACEB;
-    padding: 20px;
-    border-radius: 20px;
-    z-index: 999;
-    box-shadow: 0 0 20px rgba(0,0,0,0.3);
-    width: 30rem;
-    max-width: 90%;
-    position: relative;
-  }
-  
-  /* Quando o corpo está com overflow: hidden, o scroll é bloqueado */
-  body.modal-open {
-    overflow: hidden;
-  }
-  
-  .popup input {
-    padding: 8px;
-    margin-top: 4px;
-    border-radius: 20px;
-    border: 1px solid #ccc;
-    margin-bottom: 10px;
-  }
-  
+button,
+.arrow,
+.avatars img {
+  cursor: pointer;
+}
+
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 998;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup {
+  background: #BFACEB;
+  padding: 20px;
+  border-radius: 20px;
+  z-index: 999;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  width: 30rem;
+  max-width: 90%;
+  position: relative;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+.popup input {
+  padding: 8px;
+  margin-top: 4px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
 .popup form input[type="text"],
 .popup form input[type="email"],
 .popup form input[type="password"] {
@@ -58,144 +60,144 @@ button, .arrow, .avatars img {
 .popup form input[type="email"]::placeholder {
   color: #B9B9B9;
 }
-  .popup h2 {
-    color: #fff;
-    margin-bottom: 1.5rem;
-    font-weight: normal;
-  }
-  
-  .popup label {
-    display: block;
-    font-weight: normal;
-    margin-bottom: 4px;
-    color: #fff;
-    font-size: 1rem;
-  }
 
-  
+.popup h2 {
+  color: #fff;
+  margin-bottom: 1.5rem;
+  font-weight: normal;
+}
+
+.popup label {
+  display: block;
+  font-weight: normal;
+  margin-bottom: 4px;
+  color: #fff;
+  font-size: 1rem;
+}
+
+
 .alinha {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    margin: .5rem 0rem;
-  }
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: .5rem 0rem;
+}
 
-  .alinha label {
-    width: 17%;
-  }
-  
-  .alinha input {
-    width: 83%;
-  }
+.alinha label {
+  width: 17%;
+}
 
-  .alinha5 p {
-    font-size: 1rem;
-    color: #fff;
-  }
+.alinha input {
+  width: 83%;
+}
 
-  .alinha5 {
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 1rem;
-    margin: .5rem 0rem;
-  }
+.alinha5 p {
+  font-size: 1rem;
+  color: #fff;
+}
 
-  .alinha4 {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-  }
+.alinha5 {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  margin: .5rem 0rem;
+}
 
-  .avatars {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 10px;
-  }
-  
-  .avatars img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 2px solid transparent;
-    transition: border 0.3s;
-  }
-  
-  .avatars img.selected {
-    border-color: #9380CA;
-  }
-  
-  .profile {
-    display: none;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .profile-info {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .profile-info strong {
-    font-size: 1rem;
-    color: #fff;
-    font-weight: normal;
-  }
-  
-  .profile-info small {
-    color: #cfcdcd;
-    font-size: .8rem;
-  }
-  
-  .dropdown {
-    position: relative;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
-    right: 0;
-    top: 100%;
-    padding: 10px;
-    z-index: 5;
-    border-radius: 5px;
-    min-width: 180px;
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
+.alinha4 {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
 
-  .bx-chevron-down {
-    color: #fff;
-    font-size: 1.5rem;
-    transition: .3s;
-  }
-  
-  .close-btn {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    background: transparent;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: #fff;
-    transition: .3s;
-  }
-  
-  .close-btn:hover {
-    color: #9380CA;
-  }
-  
-  .popup button,
-  .avatars img {
-    cursor: pointer;
-  }
-  
+.avatars {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.avatars img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  transition: border 0.3s;
+}
+
+.avatars img.selected {
+  border-color: #9380CA;
+}
+
+.profile {
+  display: none;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-info strong {
+  font-size: 1rem;
+  color: #fff;
+  font-weight: normal;
+}
+
+.profile-info small {
+  color: #cfcdcd;
+  font-size: .8rem;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  right: 0;
+  top: 100%;
+  padding: 10px;
+  z-index: 5;
+  border-radius: 5px;
+  min-width: 180px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.bx-chevron-down {
+  color: #fff;
+  font-size: 1.5rem;
+  transition: .3s;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #fff;
+  transition: .3s;
+}
+
+.close-btn:hover {
+  color: #9380CA;
+}
+
+.popup button,
+.avatars img {
+  cursor: pointer;
+}

@@ -146,7 +146,7 @@ function carregarNoticias(tipo) {
     document.body.classList.add("arte");
     document.body.classList.remove("top", "natureza");
   } else if (tipo === "top") {
-    document.getElementById("subtitulo").innerText = "avanços e tecnologia.";
+    document.getElementById("subtitulo").innerText = "avanços tecnológicos.";
     document.body.classList.add("top");
     document.body.classList.remove("arte", "natureza");
   } else if (tipo === "natureza") {

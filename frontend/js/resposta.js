@@ -6,16 +6,16 @@ form.addEventListener("submit", async (e) => {
   const titulo = form.titulo.value;
   const conteudo = form.conteudo.value;
   const categoria = form.tipo.value;
-  const tagsInput = form.tags.value; // Get the tags input
-  const tags = tagsInput.split(",").map((tag) => tag.trim()); // Split by commas and trim whitespace
+  const tagsInput = form.tags.value; 
+  const tags = tagsInput.split(",").map((tag) => tag.trim()); 
   const imagemInput = document.getElementById("imageInput");
-  const imagemFile = imagemInput.files[0]; // Get the image file, if any
+  const imagemFile = imagemInput.files[0];
 
   let imagemBase64 = null;
 
   if (imagemFile) {
     try {
-      imagemBase64 = await toBase64(imagemFile); // Convert the image to base64
+      imagemBase64 = await toBase64(imagemFile); 
     } catch (err) {
       console.error("Erro ao converter imagem para base64:", err);
       alert("Erro ao processar a imagem. Tente novamente.");
@@ -34,12 +34,12 @@ async function enviarNoticia(
   imagemBase64 = null
 ) {
   const novaNoticia = {
-    id: Date.now(), // Generate a unique ID for the noticia
+    id: Date.now(), 
     titulo,
     conteudo,
     categoria,
-    tags, // Include the tags
-    imagem: imagemBase64 || null, // Send the image in base64 (if available)
+    tags, 
+    imagem: imagemBase64 || null, 
   };
 
   try {
@@ -64,12 +64,11 @@ async function enviarNoticia(
   }
 }
 
-// Função para converter arquivo para base64
 function toBase64(file) {
   return new Promise((resolve, reject) => {
     const reader = new FileReader();
     reader.readAsDataURL(file);
-    reader.onload = () => resolve(reader.result.split(",")[1]); // Remove o prefixo "data:image/..."
+    reader.onload = () => resolve(reader.result.split(",")[1]); 
     reader.onerror = (error) => reject(error);
   });
 }
@@ -123,7 +122,6 @@ async function buscarNoticias() {
     </div>
   </div>
 `;
-
 
       container.appendChild(card);
     });
