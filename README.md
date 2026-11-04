@@ -1,4 +1,4 @@
-# SyntheticA - O Futuro Sustentável da IA
+# SyntheticA
 
 🔗 **[Clique aqui para acessar o site](https://synthetica-portal.vercel.app/)**
 
